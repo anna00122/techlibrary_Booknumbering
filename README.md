@@ -24,14 +24,14 @@
 
 
 [list.xlsx]
-A열: 관리번호
-B열: ISBN 넘버
-C열: 도서명
-D열: 도서 소제목
-E열: 저자
-F열: 출판사
-G열: "청구기호" 가 들어갈것.
-
+<p>
+* A열: 관리번호
+* B열: ISBN 넘버
+* C열: 도서명
+* D열: 도서 소제목
+* E열: 저자
+* F열: 출판사
+* G열: "청구기호" 가 들어갈것.</p>
 로 G열에 청구기호가 입력되게 할것입니다
 
 
@@ -60,8 +60,8 @@ col은 0부터 시작하기때문에, 엑셀 상 5번째 열 = (col==4) 임을 �
 ### 저자 두번째글자의 기호화 (second)
 
 저자명의 두번째가 'ㅊ' 인지 아닌지에 따라 뒤의 모음기호가 달라집니다
-<b>all_num2(ip)</b>는 저자명의 두번째 글자 자음이 ㅊ이 아닌경우<br>
-<b>ch_num2(ip)</b>는 저자명의 두번째 글자 자음이 ㅊ인 경우<br>
+*all_num2(ip)* 저자명의 두번째 글자 자음이 ㅊ이 아닌경우,<br>
+*ch_num2(ip)*는 저자명의 두번째 글자 자음이 ㅊ인 경우
 
 ### 저자명 공란 없애기
 ```
@@ -69,8 +69,6 @@ for i in init:
   i['author'] = i['author'].replace(" ", "")
   author = i['author']
   book = i['book']
-
-
 ```
 저자 두번째 글자가 비어있으면 에러가 발생하므로 공란을 없애주고
 key값이 'author' 인 value자체를 author로,
@@ -82,16 +80,17 @@ key값이 'book' 인 value자체를 book으로 정의
 jamo = split_syllables(author[1])
   jamo_list = list(jamo)
 ```
+
 ```
 author = '이찬현'
 author[1] = 찬
 jamo = split_syllables(author[1])
 jamo = ('ㅊ','ㅏ','ㄴ')
 jamo list = ['ㅊ','ㅏ,'ㄴ]
-
 ```
-### 중복된 책인경우
 
+### 중복된 책인경우
+```
 cc = 1
 if cnt > 1:
     num = num + 'c' + str(cnt)
