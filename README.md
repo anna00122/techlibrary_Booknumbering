@@ -5,11 +5,11 @@
 # 설치 및 사용방법
 ## 설치
 
-    * $sudo pip3.5 install xlrd
-    * $sudo pip3.5 install xlwt
-    * $sudo pip3.5 install hangul-utils
-    * $sudo pip3.5 install requests
-    * $sudo pip3.5 install beautifulsoup4
+     $sudo pip3.5 install xlrd
+     $sudo pip3.5 install xlwt
+     $sudo pip3.5 install hangul-utils
+     $sudo pip3.5 install requests
+     $sudo pip3.5 install beautifulsoup4
 
 
 ## hangul.py
@@ -25,6 +25,7 @@
 
 #### list.xlsx
 <p>
+
 * A열: 관리번호 <br>
 * B열: ISBN 넘버<br>
 * C열: 도서명<br>
